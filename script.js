@@ -123,15 +123,14 @@ function assignClass() {
  
     for (i = 0; i < hours.length; i++) {
         console.log(hours[i].number)
-        if (hours[i].number <  12) {
+        if (hours[i].number < moment().format('HH')) {
             hours[i].element.classList.add('past')
-        } else if (hours[i].number == 12) {
+        } else if (hours[i].number == moment().format('HH')) {
             hours[i].element.classList.add('present')
-        } else if (hours[i].number > 12) {
+        } else if (hours[i].number > moment().format('HH')) {
             hours[i].element.classList.add('future')
         }
     }
 }
 
 
-//moment().format('HH'))
